@@ -9,11 +9,13 @@ public class DoorEnter : MonoBehaviour
     private bool isDoor;
     private Transform playerTransform;
 
-    private PlayerInputActions controls;
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
 
     void Awake()
     {
-        controls = new PlayerInputActions();
+        //controls = new PlayerInputActions();
+        controls = new PlayerControls();
 
         controls.GamePlay.EnterDoor.started += ctx => EnterDoor();
     }
@@ -28,13 +30,12 @@ public class DoorEnter : MonoBehaviour
         controls.GamePlay.Disable();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").
+            GetComponent<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -50,8 +51,8 @@ public class DoorEnter : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") 
-            && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        if (other.gameObject.CompareTag("Player") && 
+            other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             //Debug.Log("触碰到门了");
             isDoor = true;
@@ -60,8 +61,8 @@ public class DoorEnter : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") 
-            && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        if (other.gameObject.CompareTag("Player") && 
+            other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             //Debug.Log("离开门范围了");
             isDoor = false;

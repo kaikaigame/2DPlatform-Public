@@ -7,25 +7,27 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    private PlayerInputActions controls;
 
-    //void Awake()
-    //{
-    //    //Input System
-    //    controls = new PlayerInputActions();
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
 
-    //    controls.GamePlay.Esc.started += ctx => Esc();
-    //}
+    void Awake()
+    {
+        //controls = new PlayerInputActions();
+        controls = new PlayerControls();
 
-    //void OnEnable()
-    //{
-    //    controls.GamePlay.Enable();
-    //}
+        controls.GamePlay.Esc.started += ctx => Esc();
+    }
 
-    //void OnDisable()
-    //{
-    //    controls.GamePlay.Disable();
-    //}
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
+
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
 
     void Start()
     {
@@ -34,31 +36,31 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        //Input Manager
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
+        ////Input Manager
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    if (GameIsPaused)
+        //    {
+        //        Resume();
+        //    }
+        //    else
+        //    {
+        //        Pause();
+        //    }
+        //}
     }
 
-    //void Esc()
-    //{
-    //    if (GameIsPaused)
-    //    {
-    //        Resume();
-    //    }
-    //    else
-    //    {
-    //        Pause();
-    //    }
-    //}
+    void Esc()
+    {
+        if (GameIsPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
+    }
 
     public void Resume()
     {
@@ -81,6 +83,7 @@ public class PauseMenu : MonoBehaviour
 
         //SceneManager.LoadScene("Menu");
         SceneManager.LoadScene(0);
+        //SceneManager.LoadScene("Menu A00");
     }
 
     public void QuitGame()

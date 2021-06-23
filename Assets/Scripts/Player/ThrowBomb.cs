@@ -6,6 +6,27 @@ public class ThrowBomb : MonoBehaviour
 {
     public GameObject bomb;
 
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
+
+    void Awake()
+    {
+        //controls = new PlayerInputActions();
+        controls = new PlayerControls();
+
+        controls.GamePlay.Bomb.started += ctx => Bomb();
+    }
+
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
+
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
+
     void Start()
     {
         
@@ -13,10 +34,17 @@ public class ThrowBomb : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            Instantiate(bomb, transform.position, 
-                transform.rotation);
-        }
+        //Input Manager
+        //if(Input.GetKeyDown(KeyCode.O))
+        //{
+        //    Instantiate(bomb, transform.position, 
+        //        transform.rotation);
+        //}
+    }
+
+    //Input System
+    void Bomb()
+    {
+        Instantiate(bomb, transform.position, transform.rotation);
     }
 }

@@ -6,6 +6,27 @@ public class TrashBinItem : MonoBehaviour
 {
     private bool isPlayerInTrashBin;
 
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
+
+    void Awake()
+    {
+        //controls = new PlayerInputActions();
+        controls = new PlayerControls();
+
+        controls.GamePlay.Coin.started += ctx => ThrowCoin();
+    }
+
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
+
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
+
     void Start()
     {
         
@@ -13,17 +34,33 @@ public class TrashBinItem : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Y))
+        //Input Manager
+        //if(Input.GetKeyDown(KeyCode.Y))
+        //{
+        //    if(isPlayerInTrashBin)
+        //    {
+        //        //持有金币大于0才能投币
+        //        if(CoinUI.CurrentCoinQuantity > 0)
+        //        {
+        //            SoundManager.PlayThrowCoinClip();
+        //            TrashBinCoin.coinCurrent++;
+        //            CoinUI.CurrentCoinQuantity--;
+        //        }
+        //    }
+        //}
+    }
+
+    //Input System
+    void ThrowCoin()
+    {
+        if (isPlayerInTrashBin)
         {
-            if(isPlayerInTrashBin)
+            //持有金币大于0才能投币
+            if (CoinUI.CurrentCoinQuantity > 0)
             {
-                //持有金币大于0才能投币
-                if(CoinUI.CurrentCoinQuantity > 0)
-                {
-                    SoundManager.PlayThrowCoinClip();
-                    TrashBinCoin.coinCurrent++;
-                    CoinUI.CurrentCoinQuantity--;
-                }
+                SoundManager.PlayThrowCoinClip();
+                TrashBinCoin.coinCurrent++;
+                CoinUI.CurrentCoinQuantity--;
             }
         }
     }

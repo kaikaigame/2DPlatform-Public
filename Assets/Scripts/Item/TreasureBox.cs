@@ -11,6 +11,27 @@ public class TreasureBox : MonoBehaviour
     private bool isOpened;
     private Animator anim;
 
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
+
+    void Awake()
+    {
+        //controls = new PlayerInputActions();
+        controls = new PlayerControls();
+
+        controls.GamePlay.Treasure.started += ctx => Treasure();
+    }
+
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
+
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -19,14 +40,26 @@ public class TreasureBox : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        //Input Manager
+        //if(Input.GetKeyDown(KeyCode.I))
+        //{
+        //    if(canOpen && !isOpened)
+        //    {
+        //        anim.SetTrigger("Opening");
+        //        isOpened = true;
+        //        Invoke("GenCoin", delayTime);
+        //    }
+        //}
+    }
+
+    //Input System
+    void Treasure()
+    {
+        if (canOpen && !isOpened)
         {
-            if(canOpen && !isOpened)
-            {
-                anim.SetTrigger("Opening");
-                isOpened = true;
-                Invoke("GenCoin", delayTime);
-            }
+            anim.SetTrigger("Opening");
+            isOpened = true;
+            Invoke("GenCoin", delayTime);
         }
     }
 

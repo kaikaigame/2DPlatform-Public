@@ -6,6 +6,27 @@ public class SickleHit : MonoBehaviour
 {
     public GameObject sickle;
 
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
+
+    void Awake()
+    {
+        //controls = new PlayerInputActions();
+        controls = new PlayerControls();
+
+        controls.GamePlay.Sickle.started += ctx => Sickle();
+    }
+
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
+
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
+
     void Start()
     {
         
@@ -13,10 +34,19 @@ public class SickleHit : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.U))
-        {
-            Instantiate(sickle, transform.position, 
-                transform.rotation);
-        }
+        //Input Manager
+        //if(Input.GetKeyDown(KeyCode.U))
+        //{
+        //    Instantiate(sickle, transform.position, 
+        //        transform.rotation);
+        //}
     }
+
+    //Input System
+    void Sickle()
+    {
+        Instantiate(sickle, transform.position, transform.rotation);
+    }
+
+
 }

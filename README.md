@@ -13,17 +13,32 @@ https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
   
 Unity m_EditorVersion:  2021.1.12f1  
   
-KEYBOARD  
-  
+KEYBOARD:  
 LEFT: a or left  
 RIGHT: d or right  
-JUMP: space  
 FALL: s or down  
+JUMP: space  
 ATTACK: j  
+SICKLE: u  
+BOMB: o  
 DIALOGUE: e  
 COIN: y  
-SICKLE: u  
 TREASURE: i  
-BOMB: o  
+ENTERDOOR: i  
 MENU: esc  
+
+XBOX Controller:  
+LEFT: (Pad or Stick) Left  
+RIGHT: (Pad or Stick) Right  
+FALL:  (Pad or Stick) Down  
+JUMP: Button South or A  
+ATTACK: Button West or X  
+SICKLE: Right Shoulder or Right Bumper(RB)  
+BOMB: Right Trigger or Right Trigger(RT)  
+DIALOGUE: Button East or B  
+COIN: Button East or B  
+TREASURE: Button East or B  
+ENTERDOOR: Button East or B  
+MENU: Start or Menu  
+
   

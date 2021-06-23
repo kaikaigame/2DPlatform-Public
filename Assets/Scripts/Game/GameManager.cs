@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public static bool isGameAlive = true;
     public static CameraShake camShake;

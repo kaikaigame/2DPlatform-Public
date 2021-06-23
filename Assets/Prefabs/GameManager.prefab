@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 70242505455924983}
-  - component: {fileID: 70242505455924976}
+  - component: {fileID: 70242505529008157}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &70242505455924976
+--- !u!114 &70242505529008157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,6 +40,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 70242505455924977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a9fc7b8e5b57548a0c9ca12589d5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 1abfdcbc130daad438e01175a7539a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

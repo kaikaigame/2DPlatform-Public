@@ -8,7 +8,28 @@ public class Sign : MonoBehaviour
     public GameObject dialogBox;
     public Text dialogBoxText;
     public string signText;
-    private bool isPlayerInSign;
+    private bool isPlayerInSign;    
+    
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
+
+    void Awake()
+    {
+        //controls = new PlayerInputActions();
+        controls = new PlayerControls();
+
+        controls.GamePlay.Dialogue.started += ctx => Dialogue();
+    }
+
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
+
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
 
     void Start()
     {
@@ -17,17 +38,28 @@ public class Sign : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && isPlayerInSign)
+        //Input Manager
+        //if (Input.GetKeyDown(KeyCode.E) && isPlayerInSign)
+        //{
+        //    if (dialogBox.activeInHierarchy)
+        //    {
+        //        dialogBox.SetActive(false);
+        //    }
+        //    else
+        //    {
+        //        dialogBoxText.text = signText;
+        //        dialogBox.SetActive(true);
+        //    }
+        //}
+    }
+
+    //Input System
+    void Dialogue()
+    {
+        if (isPlayerInSign)
         {
-            //if(dialogBox.activeInHierarchy)
-            //{
-            //    dialogBox.SetActive(false);
-            //}
-            //else
-            //{
             dialogBoxText.text = signText;
             dialogBox.SetActive(true);
-            //}
         }
     }
 

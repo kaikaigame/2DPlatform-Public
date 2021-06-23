@@ -29,27 +29,36 @@ public class PlayerController : MonoBehaviour
     private bool isDoubleFalling;
 
     private float playerGravity;
-
-    private PlayerInputActions controls;
+    
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
     private Vector2 move;
 
     void Awake()
     {
         //controls = new PlayerInputActions();
-        //controls.GamePlay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
-        //controls.GamePlay.Move.canceled += ctx => move = Vector2.zero;
-        //controls.GamePlay.Jump.started += ctx => Jump();
+        controls = new PlayerControls();
+
+        //Event that is triggered when the action has been fully performed
+        controls.GamePlay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
+
+        //Event that is triggered when the action has been started 
+        //but then canceled before being fully performed
+        controls.GamePlay.Move.canceled += ctx => move = Vector2.zero;
+
+        //Event that is triggered when the action has been started
+        controls.GamePlay.Jump.started += ctx => Jump();
     }
 
-    //void OnEnable()
-    //{
-    //    controls.GamePlay.Enable();
-    //}
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
 
-    //void OnDisable()
-    //{
-    //    controls.GamePlay.Disable();
-    //}
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
 
     void Start()
     {
@@ -61,13 +70,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (GameController.isGameAlive)
+        if (GameManager.isGameAlive)
         {
             CheckAirStatus();
             Flip();
             Run();
             Climb();
-            Jump();
+
+            //Jump();
             //Attack();
 
             CheckGrounded();
@@ -114,33 +124,39 @@ public class PlayerController : MonoBehaviour
 
     void Run()
     {
-        //Input Manager
-        float moveDir = Input.GetAxis("Horizontal");
-        //Debug.Log("moveDir = " + moveDir.ToString());
-        //y速度保持不变
-        Vector2 playerVelo = new Vector2(moveDir * runSpeed, myRigidbody.velocity.y);
-        myRigidbody.velocity = playerVelo;
-        //水平轴速度大于 无限小的值
-        bool plyerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-        myAnim.SetBool("Run", plyerHasXAxisSpeed);
+        #region Input Manager
 
-        ////Input System
-        //Vector2 playerVelocity = new Vector2(move.x * runSpeed, myRigidbody.velocity.y);
-        //myRigidbody.velocity = playerVelocity;
-        //bool playerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-        //myAnim.SetBool("Run", playerHasXAxisSpeed);
+        //float moveDir = Input.GetAxis("Horizontal");
+        ////Debug.Log("moveDir = " + moveDir.ToString());
+        ////y速度保持不变
+        //Vector2 playerVelo = new Vector2(moveDir * runSpeed, myRigidbody.velocity.y);
+        //myRigidbody.velocity = playerVelo;
+        ////水平轴速度大于 无限小的值
+        //bool plyerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        //myAnim.SetBool("Run", plyerHasXAxisSpeed);
+
+        #endregion
+
+        #region Input System
+
+        Vector2 playerVelocity = new Vector2(move.x * runSpeed, myRigidbody.velocity.y);
+
+        myRigidbody.velocity = playerVelocity;
+        bool playerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        myAnim.SetBool("Run", playerHasXAxisSpeed);
+
+        #endregion
     }
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
+        //if (Input.GetButtonDown("Jump"))
+        //{
             if (isGround)
             {
                 myAnim.SetBool("Jump", true);
                 Vector2 jumpVelo = new Vector2(0.0f, jumpSpeed);
                 myRigidbody.velocity = Vector2.up * jumpVelo;
-
                 canDoubleJump = true;
             }
             else
@@ -154,35 +170,88 @@ public class PlayerController : MonoBehaviour
                     canDoubleJump = false;
                 }
             }
-        }
+        //}
     }
 
     void Climb()
     {
-        float moveY = Input.GetAxis("Vertical");
+        #region Input Manager
+
+        //float moveY = Input.GetAxis("Vertical");
+
+        //if (isClimbing)
+        //{
+        //    myRigidbody.velocity = new Vector2
+        //        (myRigidbody.velocity.x, moveY * climbSpeed);
+        //    canDoubleJump = false;
+        //}
+
+        //if (isLadder)
+        //{
+        //    //上下时才能爬梯子
+        //    if (moveY > 0.5f || moveY < -0.5f)
+        //    {
+        //        myAnim.SetBool("Jump", false);
+        //        myAnim.SetBool("DoubleJump", false);
+        //        myAnim.SetBool("Climbing", true);
+        //        myRigidbody.velocity = new Vector2
+        //            (myRigidbody.velocity.x, moveY * climbSpeed);
+        //        myRigidbody.gravityScale = 0.0f;
+        //    }
+        //    else
+        //    {
+        //        if (isJumping || isFalling
+        //            || isDoubleJumping || isDoubleFalling)
+        //        {
+        //            myAnim.SetBool("Climbing", false);
+        //        }
+        //        else
+        //        {
+        //            //停在梯子上
+        //            //myAnim.SetBool("Climbing", false);
+        //            myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0.0f);
+        //        }
+        //    }
+        //}
+        //else
+        //{
+        //    myAnim.SetBool("Climbing", false);
+        //    myRigidbody.gravityScale = playerGravity;
+        //}
+
+        //if (isLadder && isGround)
+        //{
+        //    myRigidbody.gravityScale = playerGravity;
+        //}
+
+        //Debug.Log("myRigidbody.gravityScale:"+ myRigidbody.gravityScale);
+
+        #endregion
+
+        #region Input System
 
         if (isClimbing)
         {
             myRigidbody.velocity = new Vector2
-                (myRigidbody.velocity.x, moveY * climbSpeed);
+                (myRigidbody.velocity.x, move.y * climbSpeed);
             canDoubleJump = false;
         }
 
         if (isLadder)
         {
             //上下时才能爬梯子
-            if (moveY > 0.5f || moveY < -0.5f)
+            if (move.y > 0.5f || move.y < -0.5f)
             {
                 myAnim.SetBool("Jump", false);
                 myAnim.SetBool("DoubleJump", false);
                 myAnim.SetBool("Climbing", true);
                 myRigidbody.velocity = new Vector2
-                    (myRigidbody.velocity.x, moveY * climbSpeed);
+                    (myRigidbody.velocity.x, move.y * climbSpeed);
                 myRigidbody.gravityScale = 0.0f;
             }
             else
             {
-                if (isJumping || isFalling 
+                if (isJumping || isFalling
                     || isDoubleJumping || isDoubleFalling)
                 {
                     myAnim.SetBool("Climbing", false);
@@ -206,7 +275,8 @@ public class PlayerController : MonoBehaviour
             myRigidbody.gravityScale = playerGravity;
         }
 
-        //Debug.Log("myRigidbody.gravityScale:"+ myRigidbody.gravityScale);
+        #endregion
+
     }
 
     //void Attack()
@@ -257,10 +327,18 @@ public class PlayerController : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("Player");
         }
 
-        float moveY = Input.GetAxis("Vertical");
+        //Input Manager
+        //float moveY = Input.GetAxis("Vertical");
+        //if (isOneWayPlatform && moveY < -0.1f)
+        //{
+        //    gameObject.layer = LayerMask.NameToLayer("OneWayPlatform");
+        //    Invoke("RestorePlayerLayer", restoreTime);
+        //}
 
+
+        //Input System
         //按 下 键，player图层变成OneWayPlatform，不与单向平台碰撞
-        if (isOneWayPlatform && moveY < -0.1f)
+        if (isOneWayPlatform && move.y < -0.1f)
         {
             gameObject.layer = LayerMask.NameToLayer("OneWayPlatform");
             Invoke("RestorePlayerLayer", restoreTime);

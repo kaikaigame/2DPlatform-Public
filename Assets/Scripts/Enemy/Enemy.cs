@@ -44,7 +44,7 @@ public abstract class Enemy : MonoBehaviour
         FlashColor(flashTime);
 
         Instantiate(bloodEffect, transform.position, Quaternion.identity);
-        GameController.camShake.Shake();
+        GameManager.camShake.Shake();
     }
 
     void FlashColor(float time)

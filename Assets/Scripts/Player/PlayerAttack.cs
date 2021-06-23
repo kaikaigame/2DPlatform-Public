@@ -11,24 +11,26 @@ public class PlayerAttack : MonoBehaviour
     private Animator anim;
     private new PolygonCollider2D collider2D;
 
-    private PlayerInputActions controls;
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
 
     void Awake()
     {
         //controls = new PlayerInputActions();
+        controls = new PlayerControls();
 
-        //controls.GamePlay.Attack.started += ctx => Attack();
+        controls.GamePlay.Attack.started += ctx => Attack();
     }
 
-    //void OnEnable()
-    //{
-    //    controls.GamePlay.Enable();
-    //}
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
 
-    //void OnDisable()
-    //{
-    //    controls.GamePlay.Disable();
-    //}
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
 
     void Start()
     {
@@ -39,16 +41,21 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        Attack();
+        //Attack();
     }
 
     void Attack()
     {
-        if(Input.GetButtonDown("Attack"))
-        {
-            anim.SetTrigger("Attack");
-            StartCoroutine(StartAttack());
-        }
+        ////Input Manager
+        //if (Input.GetButtonDown("Attack"))
+        //{
+        //    anim.SetTrigger("Attack");
+        //    StartCoroutine(StartAttack());
+        //}
+
+        //Input System
+        anim.SetTrigger("Attack");
+        StartCoroutine(StartAttack());
     }
 
     IEnumerator StartAttack()
