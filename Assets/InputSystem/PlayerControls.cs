@@ -83,6 +83,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""EnterDoor"",
+                    ""type"": ""Button"",
+                    ""id"": ""cd887180-daa7-4151-98f1-0c624d2415ec"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Esc"",
                     ""type"": ""Button"",
                     ""id"": ""4187c975-a5a5-4ae3-92b7-6f37b3ea7e31"",
@@ -91,9 +99,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""EnterDoor"",
+                    ""name"": ""ArrowHit"",
                     ""type"": ""Button"",
-                    ""id"": ""cd887180-daa7-4151-98f1-0c624d2415ec"",
+                    ""id"": ""b85c43d9-c81f-4109-9da0-3c6e8e1a05b4"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -498,17 +506,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""18e58496-969d-4892-8ee4-1847130e8032"",
-                    ""path"": ""<Gamepad>/select"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XBOX"",
-                    ""action"": ""Esc"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""2d358cba-46fb-410a-925b-84b9a12f2db8"",
                     ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
@@ -528,6 +525,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""EnterDoor"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f7e9afa-4663-4470-9bf5-3bb410828484"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""ArrowHit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""542b0228-0eb8-46cb-b019-723161431f82"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XBOX"",
+                    ""action"": ""ArrowHit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -536,17 +555,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ""id"": ""e97e4277-76e6-4473-8fbd-1796e154e9ae"",
             ""actions"": [
                 {
-                    ""name"": ""Submit"",
+                    ""name"": ""Move"",
                     ""type"": ""Button"",
-                    ""id"": ""56105135-2c80-417d-8bb9-9d5773bca30b"",
+                    ""id"": ""c8742a95-4f6b-4342-9871-111663c61348"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Click"",
+                    ""name"": ""Submit"",
                     ""type"": ""Button"",
-                    ""id"": ""b9b49072-d48e-4efd-9ea3-53ab45a053ec"",
+                    ""id"": ""56105135-2c80-417d-8bb9-9d5773bca30b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -558,35 +577,21 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""6fafc555-edd5-4ce4-bb56-c6a3b26c4456"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""d34facd3-3114-4839-887d-54ac12fcfc82"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Submit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7b9aa4a3-3c9b-4ca3-9c37-a79af19ab9ec"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Submit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""62cff6c9-6436-4b19-9e36-8e301ab35580"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""XBOX"",
@@ -596,23 +601,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b0073943-3853-48de-9214-1f0160f9a89d"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyBoard"",
-                    ""action"": ""Click"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""05ac575a-c490-4c25-8866-049f69e396c3"",
+                    ""id"": ""4fce7127-6f3d-46f4-b375-6d994fe3d15d"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""XBOX"",
-                    ""action"": ""Click"",
+                    ""groups"": """",
+                    ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -624,6 +618,182 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""KeyBoard"",
                     ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""41672df9-0fc1-4f92-84ce-528d6756d394"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""31a0244c-8ea7-40ff-851b-9bdef19fb928"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""50e4f8ba-6c06-47df-9097-92f9fd220aeb"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""e0f35fcd-bf2c-4e75-8fd7-e4f4512e8fc7"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""44de905b-bee4-4d8c-ae47-4931947b0c30"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Arrow"",
+                    ""id"": ""a103e128-b544-40e7-b12c-3e16150717af"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""b63bf101-81a1-4b1c-bf06-d6eb0e6ff39e"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f721caaf-e5d9-4ec1-8d18-9c35649852dc"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""3d3cba56-25ee-4d3f-bd79-cc8a04003056"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""bbeaf5f5-1ee2-4c56-b2e5-45475cbd31d2"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Pad"",
+                    ""id"": ""e07980ff-dacb-4a63-ba2a-8ba62d0e0cd8"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""c577de0d-bfce-4069-b969-47396ebb2b1f"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XBOX"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""04cd6312-b1c3-492a-8991-1ceb24b16337"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XBOX"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d40bc681-d85e-4b36-8f31-30cd2ecd7235"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XBOX"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""15d2c42d-cd1f-42d2-b3a6-3f052944639b"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XBOX"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a58ad13c-5479-490d-b418-d7fc10db3ba5"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -653,13 +823,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_GamePlay_Treasure = m_GamePlay.FindAction("Treasure", throwIfNotFound: true);
         m_GamePlay_Sickle = m_GamePlay.FindAction("Sickle", throwIfNotFound: true);
         m_GamePlay_Bomb = m_GamePlay.FindAction("Bomb", throwIfNotFound: true);
-        m_GamePlay_Esc = m_GamePlay.FindAction("Esc", throwIfNotFound: true);
         m_GamePlay_EnterDoor = m_GamePlay.FindAction("EnterDoor", throwIfNotFound: true);
+        m_GamePlay_Esc = m_GamePlay.FindAction("Esc", throwIfNotFound: true);
+        m_GamePlay_ArrowHit = m_GamePlay.FindAction("ArrowHit", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Move = m_UI.FindAction("Move", throwIfNotFound: true);
         m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
-        m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
         m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
+        m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -717,8 +889,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_GamePlay_Treasure;
     private readonly InputAction m_GamePlay_Sickle;
     private readonly InputAction m_GamePlay_Bomb;
-    private readonly InputAction m_GamePlay_Esc;
     private readonly InputAction m_GamePlay_EnterDoor;
+    private readonly InputAction m_GamePlay_Esc;
+    private readonly InputAction m_GamePlay_ArrowHit;
     public struct GamePlayActions
     {
         private @PlayerControls m_Wrapper;
@@ -731,8 +904,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Treasure => m_Wrapper.m_GamePlay_Treasure;
         public InputAction @Sickle => m_Wrapper.m_GamePlay_Sickle;
         public InputAction @Bomb => m_Wrapper.m_GamePlay_Bomb;
-        public InputAction @Esc => m_Wrapper.m_GamePlay_Esc;
         public InputAction @EnterDoor => m_Wrapper.m_GamePlay_EnterDoor;
+        public InputAction @Esc => m_Wrapper.m_GamePlay_Esc;
+        public InputAction @ArrowHit => m_Wrapper.m_GamePlay_ArrowHit;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -766,12 +940,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Bomb.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnBomb;
                 @Bomb.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnBomb;
                 @Bomb.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnBomb;
-                @Esc.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
-                @Esc.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
-                @Esc.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
                 @EnterDoor.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEnterDoor;
                 @EnterDoor.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEnterDoor;
                 @EnterDoor.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEnterDoor;
+                @Esc.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
+                @Esc.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
+                @Esc.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
+                @ArrowHit.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnArrowHit;
+                @ArrowHit.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnArrowHit;
+                @ArrowHit.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnArrowHit;
             }
             m_Wrapper.m_GamePlayActionsCallbackInterface = instance;
             if (instance != null)
@@ -800,12 +977,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Bomb.started += instance.OnBomb;
                 @Bomb.performed += instance.OnBomb;
                 @Bomb.canceled += instance.OnBomb;
-                @Esc.started += instance.OnEsc;
-                @Esc.performed += instance.OnEsc;
-                @Esc.canceled += instance.OnEsc;
                 @EnterDoor.started += instance.OnEnterDoor;
                 @EnterDoor.performed += instance.OnEnterDoor;
                 @EnterDoor.canceled += instance.OnEnterDoor;
+                @Esc.started += instance.OnEsc;
+                @Esc.performed += instance.OnEsc;
+                @Esc.canceled += instance.OnEsc;
+                @ArrowHit.started += instance.OnArrowHit;
+                @ArrowHit.performed += instance.OnArrowHit;
+                @ArrowHit.canceled += instance.OnArrowHit;
             }
         }
     }
@@ -814,16 +994,18 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_Move;
     private readonly InputAction m_UI_Submit;
-    private readonly InputAction m_UI_Click;
     private readonly InputAction m_UI_Point;
+    private readonly InputAction m_UI_Click;
     public struct UIActions
     {
         private @PlayerControls m_Wrapper;
         public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_UI_Move;
         public InputAction @Submit => m_Wrapper.m_UI_Submit;
-        public InputAction @Click => m_Wrapper.m_UI_Click;
         public InputAction @Point => m_Wrapper.m_UI_Point;
+        public InputAction @Click => m_Wrapper.m_UI_Click;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -833,28 +1015,34 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_UIActionsCallbackInterface != null)
             {
+                @Move.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
                 @Submit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
                 @Submit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
                 @Submit.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
-                @Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
-                @Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
-                @Click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
                 @Point.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
                 @Point.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
                 @Point.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
             {
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
                 @Submit.started += instance.OnSubmit;
                 @Submit.performed += instance.OnSubmit;
                 @Submit.canceled += instance.OnSubmit;
-                @Click.started += instance.OnClick;
-                @Click.performed += instance.OnClick;
-                @Click.canceled += instance.OnClick;
                 @Point.started += instance.OnPoint;
                 @Point.performed += instance.OnPoint;
                 @Point.canceled += instance.OnPoint;
+                @Click.started += instance.OnClick;
+                @Click.performed += instance.OnClick;
+                @Click.canceled += instance.OnClick;
             }
         }
     }
@@ -887,13 +1075,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnTreasure(InputAction.CallbackContext context);
         void OnSickle(InputAction.CallbackContext context);
         void OnBomb(InputAction.CallbackContext context);
-        void OnEsc(InputAction.CallbackContext context);
         void OnEnterDoor(InputAction.CallbackContext context);
+        void OnEsc(InputAction.CallbackContext context);
+        void OnArrowHit(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
+        void OnMove(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
-        void OnClick(InputAction.CallbackContext context);
         void OnPoint(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
     }
 }

@@ -18,7 +18,7 @@ public class BatDestroy : MonoBehaviour
 
     void OnDestroy()
     {
-        //EasterEgg.Password += batFlag.ToString();
+        EasterEgg.Password += batFlag.ToString();
 
         //Debug.Log("蝙蝠" + batFlag + "死掉了");
         //Debug.Log(EasterEgg.Password);

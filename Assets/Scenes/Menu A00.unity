@@ -336,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 760265968, guid: e79022fed6e1d3f40acd825f0bfecfe5, type: 3}
       propertyPath: m_MoveAction
       value: 
-      objectReference: {fileID: 1849318445910639585, guid: 68a9812a7cdffd845bdc70e692ea8473,
+      objectReference: {fileID: 1495227352720480342, guid: 68a9812a7cdffd845bdc70e692ea8473,
         type: 3}
     - target: {fileID: 760265968, guid: e79022fed6e1d3f40acd825f0bfecfe5, type: 3}
       propertyPath: m_PointAction
@@ -351,8 +351,7 @@ PrefabInstance:
     - target: {fileID: 760265968, guid: e79022fed6e1d3f40acd825f0bfecfe5, type: 3}
       propertyPath: m_CancelAction
       value: 
-      objectReference: {fileID: 4828771853863784484, guid: 68a9812a7cdffd845bdc70e692ea8473,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 760265968, guid: e79022fed6e1d3f40acd825f0bfecfe5, type: 3}
       propertyPath: m_SubmitAction
       value: 
@@ -361,7 +360,7 @@ PrefabInstance:
     - target: {fileID: 760265968, guid: e79022fed6e1d3f40acd825f0bfecfe5, type: 3}
       propertyPath: m_LeftClickAction
       value: 
-      objectReference: {fileID: 2730486632740566289, guid: 68a9812a7cdffd845bdc70e692ea8473,
+      objectReference: {fileID: 8056856818456041789, guid: 68a9812a7cdffd845bdc70e692ea8473,
         type: 3}
     - target: {fileID: 760265968, guid: e79022fed6e1d3f40acd825f0bfecfe5, type: 3}
       propertyPath: m_RightClickAction
@@ -654,7 +653,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E2D\u56FD\u8A9E"
+  m_Text: "\u4E2D\u6587"
 --- !u!114 &296786790473474925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,7 +2581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u82F1\u8A9E"
+  m_Text: "\u82F1\u6587"
 --- !u!224 &4734130966298473503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3096,7 +3095,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u65E5\u672C\u8A9E"
+  m_Text: "\u65E5\u6587"
 --- !u!224 &7581453408747477923
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3608,7 +3607,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B2\u30FC\u30E0\u7D42\u4E86"
+  m_Text: "\u9000\u51FA\u6E38\u620F"
 --- !u!224 &8248511354618597668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3688,7 +3687,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B2\u30FC\u30E0\u958B\u59CB"
+  m_Text: "\u5F00\u59CB\u6E38\u620F"
 --- !u!222 &8248511354684540146
 CanvasRenderer:
   m_ObjectHideFlags: 0

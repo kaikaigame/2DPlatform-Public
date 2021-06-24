@@ -11,7 +11,6 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rg2d;
     private Vector3 startPos;
 
-    // Use this for initialization
     void Start()
     {
         rg2d = GetComponent<Rigidbody2D>();
@@ -21,7 +20,9 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        float distance = (transform.position - startPos).sqrMagnitude;
+        float distance = (transform.position - 
+            startPos).sqrMagnitude;
+
         if (distance > arrawDistance)
         {
             Destroy(gameObject);

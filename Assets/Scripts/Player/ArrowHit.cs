@@ -6,11 +6,14 @@ public class ArrowHit : MonoBehaviour
 {
     public GameObject ArrowPrefab;
 
-    private PlayerInputActions controls;
+    //private PlayerInputActions controls;
+    private PlayerControls controls;
 
     void Awake()
     {
-        controls = new PlayerInputActions();
+        //controls = new PlayerInputActions();
+        controls = new PlayerControls();
+
         controls.GamePlay.ArrowHit.started += ctx => Shoot();
     }
 
@@ -24,13 +27,11 @@ public class ArrowHit : MonoBehaviour
         controls.GamePlay.Disable();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -39,6 +40,8 @@ public class ArrowHit : MonoBehaviour
     void Shoot()
     {
         //transform.localRotation = Quaternion.Euler(0, 0, 0);
-        Instantiate(ArrowPrefab, transform.position, transform.rotation);
+
+        if (Time.timeScale != 0)
+            Instantiate(ArrowPrefab, transform.position, transform.rotation);
     }
 }

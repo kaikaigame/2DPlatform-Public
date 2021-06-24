@@ -6,12 +6,11 @@ public class Arrow : MonoBehaviour
 {
     public int damage;
     public float speed;
-    public float arrawDistance;
+    public float arrowDistance;
 
     private Rigidbody2D rg2d;
     private Vector3 startPos;
 
-    // Use this for initialization
     void Start()
     {
         rg2d = GetComponent<Rigidbody2D>();
@@ -21,8 +20,10 @@ public class Arrow : MonoBehaviour
 
     void Update()
     {
-        float distance = (transform.position - startPos).sqrMagnitude;
-        if (distance > arrawDistance)
+        float distance = (transform.position - 
+            startPos).sqrMagnitude;
+
+        if (distance > arrowDistance)
         {
             Destroy(gameObject);
         }

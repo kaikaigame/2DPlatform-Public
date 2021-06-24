@@ -7,14 +7,12 @@ public class TrapPlatform : MonoBehaviour
     private BoxCollider2D bx2D;
     private Animator anim;
 
-    // Start is called before the first frame update
     void Start()
     {
         bx2D = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -22,8 +20,8 @@ public class TrapPlatform : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") 
-            && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        if (other.gameObject.CompareTag("Player") &&
+            other.GetType().ToString() == "UnityEngine.BoxCollider2D")
         {
             anim.SetTrigger("Collapse");
         }

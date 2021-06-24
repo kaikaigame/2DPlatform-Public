@@ -19,23 +19,30 @@ public class EasterEgg : MonoBehaviour
 
     void Update()
     {
-        //if(Password == easterEggPassword)
-        //{
-        //    Debug.Log("触发彩蛋!!!!!");
-        //    Password = "";
-        //    StartCoroutine(GenCoins());
-        //}
+        if (Password == easterEggPassword)
+        {
+            //Debug.Log("触发彩蛋!!!!!");
+            Password = "";
+            StartCoroutine(GenCoins());
+        }
     }
 
-    //IEnumerator GenCoins()
-    //{
-    //    WaitForSeconds wait = new WaitForSeconds(intervalTime);
-    //    for (int i = 0; i < coinQuantity; i++)
-    //    {
-    //        GameObject gb = Instantiate(coins, transform.position, Quaternion.identity);
-    //        Vector2 randomDirection = new Vector2(Random.Range(-0.3f,0.3f), 1.0f);
-    //        gb.GetComponent<Rigidbody2D>().velocity = randomDirection * coinUpSpeed;
-    //        yield return wait;
-    //    }
-    //}
+    IEnumerator GenCoins()
+    {
+        WaitForSeconds wait = new WaitForSeconds(intervalTime);
+
+        for (int i = 0; i < coinQuantity; i++)
+        {
+            GameObject gb = Instantiate
+                (coins, transform.position, Quaternion.identity);
+
+            Vector2 randomDirection = new Vector2
+                (Random.Range(-0.3f, 0.3f), 1.0f);
+
+            gb.GetComponent<Rigidbody2D>().velocity = 
+                randomDirection * coinUpSpeed;
+
+            yield return wait;
+        }
+    }
 }

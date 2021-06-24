@@ -21,7 +21,7 @@ JUMP: space
 ATTACK: j  
 SICKLE: u  
 BOMB: o  
-ARROW:  
+ARROW: h  
 DIALOGUE: e  
 COIN: y  
 TREASURE: i  
@@ -37,7 +37,7 @@ JUMP: Button South or A
 ATTACK: Button West or X  
 SICKLE: Right Shoulder or Right Bumper(RB)  
 BOMB: Right Trigger or Right Trigger(RT)  
-ARROW:  
+ARROW:  Button North or Y  
 DIALOGUE: Button East or B  
 COIN: Button East or B  
 TREASURE: Button East or B  
