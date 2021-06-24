@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         //有速度才可能翻转
         bool plyerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
 
-        if (plyerHasXAxisSpeed)
+        if (plyerHasXAxisSpeed && Time.timeScale != 0)
         {
             if (myRigidbody.velocity.x > 0.1f)
             {
@@ -141,9 +141,12 @@ public class PlayerController : MonoBehaviour
 
         Vector2 playerVelocity = new Vector2(move.x * runSpeed, myRigidbody.velocity.y);
 
-        myRigidbody.velocity = playerVelocity;
-        bool playerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-        myAnim.SetBool("Run", playerHasXAxisSpeed);
+        if (Time.timeScale != 0)
+        {
+            myRigidbody.velocity = playerVelocity;
+            bool playerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+            myAnim.SetBool("Run", playerHasXAxisSpeed);
+        }
 
         #endregion
     }
@@ -151,7 +154,10 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         //if (Input.GetButtonDown("Jump"))
-        //{
+        //{        
+        //}
+        if (Time.timeScale != 0)
+        {
             if (isGround)
             {
                 myAnim.SetBool("Jump", true);
@@ -170,7 +176,8 @@ public class PlayerController : MonoBehaviour
                     canDoubleJump = false;
                 }
             }
-        //}
+        }
+
     }
 
     void Climb()

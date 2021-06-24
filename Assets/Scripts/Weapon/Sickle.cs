@@ -32,7 +32,8 @@ public class Sickle : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, 0, rotateSpeed);
+        if (Time.timeScale != 0)
+            transform.Rotate(0, 0, rotateSpeed);
 
         //线性插值 回到角色位置
         float yBack = Mathf.Lerp(transform.position.y,

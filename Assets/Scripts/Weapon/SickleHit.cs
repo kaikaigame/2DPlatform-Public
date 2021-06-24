@@ -45,7 +45,8 @@ public class SickleHit : MonoBehaviour
     //Input System
     void Sickle()
     {
-        Instantiate(sickle, transform.position, transform.rotation);
+        if (Time.timeScale != 0)
+            Instantiate(sickle, transform.position, transform.rotation);
     }
 
 

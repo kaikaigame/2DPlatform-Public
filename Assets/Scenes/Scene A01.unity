@@ -23836,6 +23836,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2107830940, guid: abfcbecd2b8e96e4282ae902a4a2a71d, type: 3}
+      propertyPath: m_Text
+      value: "\u7EE7\u7EED"
+      objectReference: {fileID: 0}
     - target: {fileID: 92828540367584378, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -23844,7 +23848,7 @@ PrefabInstance:
     - target: {fileID: 92828540367584378, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCurrentLanguage
+      value: SetCurrentLanguageAll
       objectReference: {fileID: 0}
     - target: {fileID: 981034409740898352, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
@@ -23949,7 +23953,7 @@ PrefabInstance:
     - target: {fileID: 4260116444328055889, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCurrentLanguage
+      value: SetCurrentLanguageAll
       objectReference: {fileID: 0}
     - target: {fileID: 4635977824805494564, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
@@ -24029,12 +24033,32 @@ PrefabInstance:
     - target: {fileID: 6888931183225837310, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCurrentLanguage
+      value: SetCurrentLanguageAll
       objectReference: {fileID: 0}
     - target: {fileID: 7459089872603719410, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: FallbackText
       value: MAIN
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484317908519848023, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: m_IsOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484317908519848023, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1956409316}
+    - target: {fileID: 7484317908519848023, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCurrentLanguageAll
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484317908519848023, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: English
       objectReference: {fileID: 0}
     - target: {fileID: 7520593944725312404, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
@@ -24076,10 +24100,20 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7526582032315496183, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u82F1\u6587"
+      objectReference: {fileID: 0}
     - target: {fileID: 7804559506719873206, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883978310017909674, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u9000\u51FA\u6E38\u620F"
       objectReference: {fileID: 0}
     - target: {fileID: 8604660055381875195, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
@@ -24235,6 +24269,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8848510129793738922, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u4E3B\u83DC\u5355"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abfcbecd2b8e96e4282ae902a4a2a71d, type: 3}

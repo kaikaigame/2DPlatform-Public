@@ -110,7 +110,7 @@ MonoBehaviour:
   currentLanguage: English
   detectLanguage: 0
   defaultLanguage: English
-  saveLoad: 0
+  saveLoad: 1
   prefabs: []
 --- !u!1 &3309498294959738602
 GameObject:

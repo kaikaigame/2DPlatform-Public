@@ -21,12 +21,14 @@ JUMP: space
 ATTACK: j  
 SICKLE: u  
 BOMB: o  
+ARROW:  
 DIALOGUE: e  
 COIN: y  
 TREASURE: i  
 ENTERDOOR: i  
+UI: enter or left mouse  
 MENU: esc  
-
+  
 XBOX Controller:  
 LEFT: (Pad or Stick) Left  
 RIGHT: (Pad or Stick) Right  
@@ -35,10 +37,12 @@ JUMP: Button South or A
 ATTACK: Button West or X  
 SICKLE: Right Shoulder or Right Bumper(RB)  
 BOMB: Right Trigger or Right Trigger(RT)  
+ARROW:  
 DIALOGUE: Button East or B  
 COIN: Button East or B  
 TREASURE: Button East or B  
 ENTERDOOR: Button East or B  
-MENU: Start or Menu  
+UI: Button East or B  
+MENU: Start or Select or Menu or View  
 
   

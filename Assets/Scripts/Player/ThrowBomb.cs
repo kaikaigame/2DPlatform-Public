@@ -45,6 +45,7 @@ public class ThrowBomb : MonoBehaviour
     //Input System
     void Bomb()
     {
-        Instantiate(bomb, transform.position, transform.rotation);
+        if (Time.timeScale != 0)
+            Instantiate(bomb, transform.position, transform.rotation);
     }
 }

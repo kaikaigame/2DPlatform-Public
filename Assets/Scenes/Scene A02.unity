@@ -13789,7 +13789,7 @@ PrefabInstance:
     - target: {fileID: 92828540367584378, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCurrentLanguage
+      value: SetCurrentLanguageAll
       objectReference: {fileID: 0}
     - target: {fileID: 3127731646917404640, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
@@ -13809,7 +13809,7 @@ PrefabInstance:
     - target: {fileID: 4260116444328055889, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCurrentLanguage
+      value: SetCurrentLanguageAll
       objectReference: {fileID: 0}
     - target: {fileID: 6412422204488601160, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
@@ -13829,7 +13829,27 @@ PrefabInstance:
     - target: {fileID: 6888931183225837310, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCurrentLanguage
+      value: SetCurrentLanguageAll
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484317908519848023, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: m_IsOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484317908519848023, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2130618168}
+    - target: {fileID: 7484317908519848023, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCurrentLanguageAll
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484317908519848023, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: English
       objectReference: {fileID: 0}
     - target: {fileID: 8604660055381875195, guid: abfcbecd2b8e96e4282ae902a4a2a71d,
         type: 3}
