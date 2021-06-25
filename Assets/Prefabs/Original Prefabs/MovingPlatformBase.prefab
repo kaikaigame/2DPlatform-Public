@@ -126,8 +126,8 @@ MonoBehaviour:
   speed: 2
   waitTime: 0.5
   movePos:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6275261681142522989}
+  - {fileID: 6275261680426987253}
 --- !u!1 &6275261680426987252
 GameObject:
   m_ObjectHideFlags: 0

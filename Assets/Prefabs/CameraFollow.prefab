@@ -183,4 +183,4 @@ MonoBehaviour:
   target: {fileID: 0}
   smoothing: 0.1
   minPosition: {x: -20, y: 0}
-  maxPosition: {x: 20, y: 20}
+  maxPosition: {x: 26, y: 20}

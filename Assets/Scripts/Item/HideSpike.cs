@@ -8,13 +8,11 @@ public class HideSpike : MonoBehaviour
     public float time;
     private Animator anim;
 
-    // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -22,7 +20,8 @@ public class HideSpike : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.PolygonCollider2D")
+        if (other.gameObject.CompareTag("Player") && 
+            other.GetType().ToString() == "UnityEngine.PolygonCollider2D")
         {
             StartCoroutine(SpikeAttack());
         }
@@ -32,6 +31,8 @@ public class HideSpike : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         anim.SetTrigger("Attack");
-        Instantiate(hideSpikeBox, transform.position, Quaternion.identity);
+
+        Instantiate(hideSpikeBox, transform.position, 
+            Quaternion.identity);
     }
 }

@@ -12,21 +12,22 @@ public class EnemySnake : Enemy
     private bool movingRight = true;
     private float wait;
 
-    // Use this for initialization
     public new void Start()
     {
         base.Start();
         wait = waitTime;
     }
 
-    // Update is called once per frame
     public new void Update()
     {
         base.Update();
-        transform.position = 
-            Vector2.MoveTowards(transform.position, moveSpots[i].position, speed * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, moveSpots[i].position) < 0.1f)
+        transform.position = 
+            Vector2.MoveTowards(transform.position, 
+            moveSpots[i].position, speed * Time.deltaTime);
+
+        if (Vector2.Distance(transform.position, 
+            moveSpots[i].position) < 0.1f)
         {
             if (waitTime <= 0)
             {
@@ -52,6 +53,7 @@ public class EnemySnake : Enemy
                     i = 0;
                 }
 
+                //恢复cd时间
                 waitTime = wait;
             }
             else

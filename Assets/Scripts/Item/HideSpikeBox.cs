@@ -9,14 +9,14 @@ public class HideSpikeBox : MonoBehaviour
 
     private PlayerHealth playerHealth;
 
-    // Start is called before the first frame update
     void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").
+            GetComponent<PlayerHealth>();
+
         Destroy(gameObject, destroyTime);
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -24,7 +24,8 @@ public class HideSpikeBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.PolygonCollider2D")
+        if (other.gameObject.CompareTag("Player") && 
+            other.GetType().ToString() == "UnityEngine.PolygonCollider2D")
         {
             playerHealth.DamagePlayer(damage);
         }

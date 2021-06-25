@@ -10,22 +10,22 @@ public class TestUnityTime : MonoBehaviour
     private int j = 0;
     private float time;
 
-    // Start is called before the first frame update
     void Start()
     {
         //DeleteByCoroutine();
+
         //DeleteByInvoke();
+
         time = coldTime;
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         DeleteByDeltaTime();
-    }    
-   
-    //1.协程
+    }
+
+    //1.协程 Coroutine
     void DeleteByCoroutine()
     {
         for(int i = 0; i < objs.Length; i++)
@@ -40,7 +40,7 @@ public class TestUnityTime : MonoBehaviour
         Destroy(objs[i]);
     }
 
-    //2.invoke
+    //2.Invoke 调用方法不能有参数
     void DeleteByInvoke()
     {
         for (int i = 0; i < objs.Length; i++)
@@ -58,7 +58,8 @@ public class TestUnityTime : MonoBehaviour
     //3.Time.deltaTime
     void DeleteByDeltaTime()
     {
-        if(j < 10)
+        //if(j < 10)
+        if (j < objs.Length)
         {
             if (coldTime > 0)
             {
