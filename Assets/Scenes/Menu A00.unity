@@ -330,16 +330,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3309498294591643309, guid: a9210cccbbf96184da1f4efdd352ea1e,
-        type: 3}
-      propertyPath: saveLoad
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3309498294591643309, guid: a9210cccbbf96184da1f4efdd352ea1e,
-        type: 3}
-      propertyPath: currentLanguage
-      value: English
-      objectReference: {fileID: 0}
     - target: {fileID: 3309498294591643310, guid: a9210cccbbf96184da1f4efdd352ea1e,
         type: 3}
       propertyPath: m_Name
@@ -686,7 +676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E2D\u56FD\u8A9E"
+  m_Text: Chinese
 --- !u!222 &365211465211976338
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2600,7 +2590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u82F1\u8A9E"
+  m_Text: English
 --- !u!224 &4734130966298473503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3114,7 +3104,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u65E5\u672C\u8A9E"
+  m_Text: Japanese
 --- !u!224 &7581453408747477923
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3626,7 +3616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B2\u30FC\u30E0\u7D42\u4E86"
+  m_Text: QUIT
 --- !u!224 &8248511354618597668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3706,7 +3696,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B2\u30FC\u30E0\u958B\u59CB"
+  m_Text: PLAY
 --- !u!222 &8248511354684540146
 CanvasRenderer:
   m_ObjectHideFlags: 0

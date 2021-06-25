@@ -43,6 +43,6 @@ COIN: Button East or B
 TREASURE: Button East or B  
 ENTERDOOR: Button East or B  
 UI: Button East or B  
-MENU: Start or Select or Menu or View  
+MENU: Start or Menu  
 
   
