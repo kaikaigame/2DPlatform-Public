@@ -28,14 +28,17 @@ public class MovingPlatform : MonoBehaviour
         {
             if (waitTime < 0.0f)
             {
-                if (i == 0)
-                {
-                    i = 1;//下一个位置
-                }
-                else
-                {
-                    i = 0;
-                }
+                //if (i == 0)
+                //{
+                //    i = 1;//下一个位置
+                //}
+                //else
+                //{
+                //    i = 0;
+                //}
+
+                i = i == 0 ? 1 : 0;
+
                 waitTime = 0.5f;
             }
             else
