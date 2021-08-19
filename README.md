@@ -11,6 +11,8 @@ https://assetstore.unity.com/packages/tools/localization/lean-localization-28504
   
 https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059  
   
+https://github.com/Unity-Technologies/2d-extras  
+  
 Unity m_EditorVersion:  2021.1.17f1  
   
 KEYBOARD:  
