@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 6340842506906249722}
   - component: {fileID: 6340842506906249717}
   - component: {fileID: 6340842506906249716}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: PlayerAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
