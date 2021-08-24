@@ -106,9 +106,9 @@ public class PlayerController : MonoBehaviour
     void Flip()//翻转人物
     {
         //有速度才可能翻转
-        bool plyerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        bool playerHasXAxisSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
 
-        if (plyerHasXAxisSpeed && Time.timeScale != 0)
+        if (playerHasXAxisSpeed && Time.timeScale != 0)
         {
             if (myRigidbody.velocity.x > 0.1f)
             {

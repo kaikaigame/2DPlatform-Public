@@ -38,7 +38,7 @@ FALL:  (Pad or Stick) Down
 JUMP: Button South or A  
 ATTACK: Button West or X  
 SICKLE: Right Shoulder or Right Bumper(RB)  
-BOMB: Right Trigger or Right Trigger(RT)  
+BOMB: Right Trigger(RT)  
 ARROW:  Button North or Y  
 DIALOGUE: Button East or B  
 COIN: Button East or B  
