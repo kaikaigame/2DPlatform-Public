@@ -21,7 +21,8 @@ public class HideSpike : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && 
-            other.GetType().ToString() == "UnityEngine.PolygonCollider2D")
+            other.GetComponent<PolygonCollider2D>())
+            //other.GetType().ToString() == "UnityEngine.PolygonCollider2D")
         {
             StartCoroutine(SpikeAttack());
         }
