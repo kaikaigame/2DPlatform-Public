@@ -13,7 +13,7 @@ https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
   
 https://github.com/Unity-Technologies/2d-extras  
   
-Unity m_EditorVersion:  2021.1.25f1  
+Unity m_EditorVersion:  2021.2.0f1  
   
 KEYBOARD:  
 LEFT: a or left  
